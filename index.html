@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App trusttttttt</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar on top -->
+    <nav class="navbar"> 
+        <div class="navbar__container">
+            <div class="icon_and_text">
+                <img src="images/bug_icon.png" alt="bug_icon" id="main__logo">
+                <h1>Bugdet</h1>
+                <div class="burger_container">
+                    <span class="burger"></span>
+                    <span class="burger"></span>
+                    <span class="burger"></span>
+                </div>
+            </div>
+            
+            <img src="images/settings_icon.png" alt="settings_icon" id="settings_icon">
+        </div>
+    </nav>
+
+    <!-- Lines -->
+    <div class="lines">
+        <div class="horizontal-line"></div>
+        <div class="vertical-line"></div>
+    </div>
+
+    <!-- Menu on side -->
+    <div class="menu_container">
+        <nav class="menu">
+            <a href="/" class="menu_items">Dashboard</a>
+            <a href="/" class="menu_items">Transactions</a>
+            <a href="/" class="menu_items">Reports</a>
+            <a href="/" class="menu_items">Settings</a>
+        </nav>
+    </div>
+    
+    <!-- Hero section -->
+    <!-- Month and year boxes -->
+    <div class="month_and_year_stats_container">
+        <div class="ov_box_container" id="month_stats_box_container">
+            <div class="stats_container">
+                <h1 id="stats_text">Month Statistics</h1>
+                <div id="line_month"></div>
+            </div>
+            <div class="inc_exp_box_container" id="month_inc_exp_box_container">
+                <!-- Income box -->
+                <div class="ov_box" id="month_inc_box">
+                    <div class="ov_text" id="month_inc_text">
+                        <h1>Income</h1>
+                        <h2 id="income_text">$0.00</h2>
+                    </div>
+                </div>
+
+                <!-- Expenses box -->
+                <div class="ov_box" id="month_exp_box">
+                    <div class="ov_text" id="month_exp_text">
+                        <h1>Expenses</h1>
+                        <h2 id="expenses_text">$0.00</h2>
+                    </div>
+                </div>
+
+                
+            </div>
+            <!-- Net box -->
+            <div class="ov_box" id="net_box_container">
+                <div class="ov_text" id="net_text_container">
+                    <h1>Net</h1>
+                    <h2 id="net_text">$0.00</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="ov_box_container" id="year_stats_box_container">
+            <div class="stats_container">
+                <h1 id="stats_text">Yearly Statistics</h1>
+                <div id="line_month"></div>
+            </div>
+            <div class="inc_exp_box_container">
+
+                <!-- Income box -->
+                <div class="ov_box">
+                    <div class="ov_text">
+                        <h1>Income</h1>
+                        <h2 id="income_text">$0.00</h2>
+                    </div>
+                </div>
+
+                <!-- Expenses box -->
+                <div class="ov_box">
+                    <div class="ov_text">
+                        <h1>Expenses</h1>
+                        <h2 id="expenses_text">$0.00</h2>
+                    </div>
+                </div>
+
+                
+            </div>
+            <!-- Net box -->
+            <div class="ov_box" id="net_box_container">
+                <div class="ov_text" id="net_text_container">
+                    <h1>Net</h1>
+                    <h2 id="net_text">$0.00</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Javascript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+
+/* Navigation bar on top */
+.navbar {
+    height: 80px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    padding-left: 1rem;
+    height: 7rem;
+    z-index: 24000;
+    background-color: #fff;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+}
+
+.icon_and_text {
+    display: flex;
+    padding: 0 1rem;
+    font-size: 24px;
+    align-items: center;
+}
+
+#main__logo {
+    height: 60px;
+    width: 60px;
+}
+
+#settings_icon {
+    height: 60px;
+    width: 60px;
+    margin-right: 2rem;
+}
+
+.burger {
+    display: block;
+    width: none;
+    height: 3px;
+    background-color: gray;
+    margin: 4px auto;
+}
+
+.burger_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 4px;
+    margin-left: 1rem;
+}
+
+
+/* Lines */
+.horizontal-line {
+    background-color: grey;
+    height: 1px;
+    width: 100%;
+    position: fixed;
+}
+
+.vertical-line {
+    background-color: grey;
+    height: 100%;
+    width: 1px;
+    position: fixed;
+    left: 17rem;
+    transition: none;
+}
+
+
+/* Sidebar menu */
+.menu {
+    margin-top: 1px;
+    width: 17rem;
+    display: grid;
+    position: fixed;
+    transition: none;
+}
+
+.menu a {
+    padding: 3rem;
+    text-decoration: none;
+    color: grey;
+    cursor: pointer;
+    justify-self: center;
+    display: flex;
+    font-size: 24px;
+}
+
+.menu_items {
+    width: 17rem;
+    justify-content: center;
+}
+
+.menu a:hover {
+    background-color: #e1e1e1;
+}
+
+
+/* Mobile response for menu */
+@media screen and (max-width: 740px) {
+    .burger {
+        width: 2rem;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s ease-in;
+        transform: translateX(-100%);
+    }
+
+    .vertical-line {
+        transition: all 0.3s ease-in;
+        transform: translateX(-18rem);
+    }
+
+    .menu.active {
+        transform: translateX(0);
+    } 
+
+    .vertical-line.active {
+        transform: translateX(0);
+    }
+}
+
+/* Hero section */
+
+/* Month + Year div */
+
+.month_and_year_stats_container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    width: 1000px;
+    gap: 2rem;
+    /* margin-left: 17rem; */
+    position: absolute;
+    left: 17rem;
+    top: 9rem;
+}
+
+/* Monthly expenditure box */
+
+.ov_box_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-evenly;
+    width: 440px;
+    height: 330px;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+#line_month {
+    background-color: gray;
+    height: 1px;
+    width: 162%;
+    justify-self: center;
+    margin-top: 5px;
+}
+
+#stats_text {
+    font-size: 36px;
+    color: gray;
+}
+
+.inc_exp_box_container {
+    width: 390px;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ov_box {
+    width: 190px;
+    height: 140px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+.ov_text {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.ov_text h1 {
+    font-size: 30px;
+    color: gray;
+}
+
+.ov_text h2 {
+    font-size: 48px;
+    color: gray;
+}
+
+#net_box_container {
+    margin-top: 0;
+    height: 75px;
+    width: 390px;
+}
+
+#net_text_container {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#net_text_container h2 {
+    font-size: 42px;
+}
+
+@media screen and (max-width: 1234px) {
+    .month_and_year_stats_container {
+        left: 19rem;
+        width: 445px;
+        transition: all 0.3s ease-in;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .month_and_year_stats_container {
+        display: flex;
+        left: 7rem;
+        width: 445px;
+        transition: all 0.3s ease-in;
+    }
+
+    .and_year_stats_container.menuOpened {
+        left: 17rem;
+    }
+}
