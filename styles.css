@@ -87,12 +87,15 @@
 
 
 /* Sidebar menu */
+
+
 .menu {
     margin-top: 7rem;
     width: 17rem;
     display: grid;
     position: fixed;
     transition: none;
+    background-color: white;
 }
 
 .menu a {
@@ -108,6 +111,7 @@
 .menu_items {
     width: 17rem;
     justify-content: center;
+    background-color: #fff;
 }
 
 .menu a:hover {
@@ -126,11 +130,14 @@
         flex-direction: column;
         transition: all 0.3s ease-in;
         transform: translateX(-100%);
+        background-color: white;
+        z-index: 9999;
     }
 
     .vertical-line {
         transition: all 0.3s ease-in;
-        transform: translateX(-18rem);
+        transform: translateX(-17rem);
+        width: 0px;
     }
 
     .menu.active {
@@ -138,11 +145,14 @@
     } 
 
     .vertical-line.active {
+        width: 1px;
         transform: translateX(0);
     }
 }
 
 /* Hero section */
+
+/* Month and year section */
 
 /* Month + Year div */
 
@@ -240,7 +250,9 @@
     font-size: 26px;
 }
 
-@media screen and (max-width: 1234px) {
+/* Month and year mobile response */
+
+@media screen and (max-width: 1100px) {
     .month_and_year_stats_container {
         left: 19rem;
         width: 445px;
@@ -248,15 +260,34 @@
     }
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 770px) {
     .month_and_year_stats_container {
         display: flex;
-        left: 7rem;
-        width: 445px;
+        left: 0rem;
+        /* width: 445px; */
+        width: 100%;
         transition: all 0.3s ease-in;
     }
 
-    .and_year_stats_container.menuOpened {
+    .month_and_year_stats_container.menuOpened {
+        /* left: 17rem; */
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .month_and_year_stats_container {
+        display: flex;
+        left: 0rem;
+        width: 100%; 
+        transition: all 0.3s ease-in;
+    }
+
+    .month_and_year_stats_container.menuOpened {
         left: 17rem;
     }
 }
+
+/* Graph for income and expenses */
+
+
