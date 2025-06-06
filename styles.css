@@ -6,9 +6,22 @@
   font-family: 'Kumbh Sans', sans-serif;
 }
 
+body {
+    display: grid;
+    grid-template-columns: 17rem 1fr;
+    grid-template-rows: 7rem auto;
+    grid-template-areas:
+        "navbar navbar"
+        "sidebar main";
+    min-height: 100vh;
+}
 
 /* Navigation bar on top */
 .navbar {
+    grid-area: navbar;
+    position: sticky;
+    top: 0;
+    z-index: 24000;
     height: 80px;
     width: 100%;
     align-items: center;
@@ -89,15 +102,16 @@
 /* Sidebar menu */
 
 .menu_container {
-    height: 110vh;
-    width: 17rem;
-    position: fixed;
-    background-color: white;
+    grid-area: sidebar;
+    height: auto;
+    position: sticky;
+    top: 0;
     z-index: 9999;
+    background-color: white;
 }
 
 .menu {
-    margin-top: 7rem;
+    /* margin-top: 7rem; */
     width: 17rem;
     display: grid;
     position: fixed;
@@ -172,22 +186,34 @@
 
 /* Hero section */
 
+.main_section {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 17rem 17rem;
+    grid-template-rows: 17rem auto;
+    grid-template-areas: 
+        "month_stats month_stats"
+        "net_graph net_graph";
+}
+
 /* Month and year section */
 
 /* Month + Year div */
 
 .month_and_year_stats_container {
-    display: flex;
+    grid-area: month_stats;
     flex-wrap: wrap; 
     justify-content: center;
-    width: 1000px;
+    display: flex;
+    width: 752px;
+    height: 290px;
+    margin-left: 2rem;
+    margin-top: 2rem;
     gap: 2rem;
-    position: absolute;
-    left: 12rem;
-    top: 9rem;
 }
 
 /* Monthly expenditure box */
+
 
 .ov_box_container {
     display: flex;
@@ -307,18 +333,16 @@
 /* Graph for income and expenses */
 
 .graph_container {
-    position: absolute;
+    grid-area: main;
+    margin-top: 22rem;
     width: 700px;
     height: 400px;
-    z-index: 9999;
-    left: 20rem;
-    top: 28rem;
     border-radius: 6px;
     border-color: gray;
     border: 1px gray solid;
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
 }
 
 #graph {

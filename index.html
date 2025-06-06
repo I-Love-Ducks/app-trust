@@ -45,77 +45,79 @@
     
     <!-- Hero section -->
     <!-- Month and year boxes -->
-    <div class="month_and_year_stats_container">
-        <div class="ov_box_container" id="month_stats_box_container">
-            <div class="stats_container">
-                <h1 id="stats_text">Month Statistics</h1>
-            </div>
-            <div id="line_ov_box"></div>
-            <div class="inc_exp_box_container" id="month_inc_exp_box_container">
-                <!-- Income box -->
-                <div class="ov_box" id="month_inc_box">
-                    <div class="ov_text" id="month_inc_text">
-                        <h1>Income</h1>
-                        <h2 id="income_text">$0.00</h2>
+    <div class="main_section">
+        <div class="month_and_year_stats_container">
+            <div class="ov_box_container" id="month_stats_box_container">
+                <div class="stats_container">
+                    <h1 id="stats_text">Month Statistics</h1>
+                </div>
+                <div id="line_ov_box"></div>
+                <div class="inc_exp_box_container" id="month_inc_exp_box_container">
+                    <!-- Income box -->
+                    <div class="ov_box" id="month_inc_box">
+                        <div class="ov_text" id="month_inc_text">
+                            <h1>Income</h1>
+                            <h2 id="income_text">$0.00</h2>
+                        </div>
+                    </div>
+
+                    <!-- Expenses box -->
+                    <div class="ov_box" id="month_exp_box">
+                        <div class="ov_text" id="month_exp_text">
+                            <h1>Expenses</h1>
+                            <h2 id="expenses_text">$0.00</h2>
+                        </div>
+                    </div>
+
+                    
+                </div>
+                <!-- Net box -->
+                <div class="ov_box" id="net_box_container">
+                    <div class="ov_text" id="net_text_container">
+                        <h1>Net</h1>
+                        <h2 id="net_text">$0.00</h2>
                     </div>
                 </div>
-
-                <!-- Expenses box -->
-                <div class="ov_box" id="month_exp_box">
-                    <div class="ov_text" id="month_exp_text">
-                        <h1>Expenses</h1>
-                        <h2 id="expenses_text">$0.00</h2>
-                    </div>
-                </div>
-
-                
             </div>
-            <!-- Net box -->
-            <div class="ov_box" id="net_box_container">
-                <div class="ov_text" id="net_text_container">
-                    <h1>Net</h1>
-                    <h2 id="net_text">$0.00</h2>
+
+            <div class="ov_box_container" id="year_stats_box_container">
+                <div class="stats_container">
+                    <h1 id="stats_text">Yearly Statistics</h1>
+                </div>
+                <div id="line_ov_box"></div>
+                <div class="inc_exp_box_container">
+
+                    <!-- Income box -->
+                    <div class="ov_box">
+                        <div class="ov_text">
+                            <h1>Income</h1>
+                            <h2 id="income_text">$0.00</h2>
+                        </div>
+                    </div>
+
+                    <!-- Expenses box -->
+                    <div class="ov_box">
+                        <div class="ov_text">
+                            <h1>Expenses</h1>
+                            <h2 id="expenses_text">$0.00</h2>
+                        </div>
+                    </div>
+
+                    
+                </div>
+                <!-- Net box -->
+                <div class="ov_box" id="net_box_container">
+                    <div class="ov_text" id="net_text_container">
+                        <h1>Net</h1>
+                        <h2 id="net_text">$0.00</h2>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="ov_box_container" id="year_stats_box_container">
-            <div class="stats_container">
-                <h1 id="stats_text">Yearly Statistics</h1>
-            </div>
-            <div id="line_ov_box"></div>
-            <div class="inc_exp_box_container">
-
-                <!-- Income box -->
-                <div class="ov_box">
-                    <div class="ov_text">
-                        <h1>Income</h1>
-                        <h2 id="income_text">$0.00</h2>
-                    </div>
-                </div>
-
-                <!-- Expenses box -->
-                <div class="ov_box">
-                    <div class="ov_text">
-                        <h1>Expenses</h1>
-                        <h2 id="expenses_text">$0.00</h2>
-                    </div>
-                </div>
-
-                
-            </div>
-            <!-- Net box -->
-            <div class="ov_box" id="net_box_container">
-                <div class="ov_text" id="net_text_container">
-                    <h1>Net</h1>
-                    <h2 id="net_text">$0.00</h2>
-                </div>
-            </div>
+        <div class="graph_container">
+            <canvas id="graph"></canvas>
         </div>
-    </div>
-
-    <div class="graph_container">
-        <canvas id="graph"></canvas>
     </div>
 
     <!-- Javascript -->
