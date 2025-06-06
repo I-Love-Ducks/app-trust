@@ -88,6 +88,13 @@
 
 /* Sidebar menu */
 
+.menu_container {
+    height: 110vh;
+    width: 17rem;
+    position: fixed;
+    background-color: white;
+    z-index: 9999;
+}
 
 .menu {
     margin-top: 7rem;
@@ -125,6 +132,15 @@
         width: 2rem;
     }
 
+    .menu_container {
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s ease-in;
+        transform: translateX(-100%);
+        background-color: white;
+        z-index: 9999;
+    }
+
     .menu {
         display: flex;
         flex-direction: column;
@@ -141,6 +157,10 @@
     }
 
     .menu.active {
+        transform: translateX(0);
+    } 
+
+    .menu_container.active {
         transform: translateX(0);
     } 
 
@@ -286,4 +306,23 @@
 
 /* Graph for income and expenses */
 
+.graph_container {
+    position: absolute;
+    width: 700px;
+    height: 400px;
+    z-index: 9999;
+    left: 20rem;
+    top: 28rem;
+    border-radius: 6px;
+    border-color: gray;
+    border: 1px gray solid;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
 
+#graph {
+    left: 17rem;
+    width: 100%;
+    height: 400px;
+}
