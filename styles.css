@@ -282,10 +282,6 @@
         width: 100%; 
         transition: all 0.3s ease-in;
     }
-
-    .month_and_year_stats_container.menuOpened {
-        left: 17rem;
-    }
 }
 
 /* Graph for income and expenses */
