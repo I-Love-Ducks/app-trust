@@ -282,12 +282,28 @@
         width: 100%; 
         transition: all 0.3s ease-in;
     }
-
-    .month_and_year_stats_container.menuOpened {
-        left: 17rem;
-    }
 }
 
 /* Graph for income and expenses */
 
+.graph_container {
+    position: absolute;
+    width: 850px;
+    height: 400px;
+    z-index: 9999;
+    left: 19rem;
+    top: 28rem;
+    border-radius: 6px;
+    border-color: gray;
+    border: 1px gray solid;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
 
+#graph {
+    left: 17rem;
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+}
