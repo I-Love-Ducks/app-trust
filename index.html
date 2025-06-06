@@ -120,13 +120,13 @@
 
     <!-- Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-
+    <script src="script.js"></script>
     <script>
         let categories = ["a", "b", "c", "d", "e"];
 
-        let numbers = [1, 3, 6, 5, 3];
+        let numbers = [7, 6, 6, 5, 9];
 
-        let expensesjs = [3, 5, 1, 6, 4];
+        let expensesjs = [3, 5, 1, 3, 4];
 
         let netjs = numbers.map((value, index) => value - expensesjs[index]);
 
@@ -135,14 +135,14 @@
             datasets: [{
                 label: 'Income',
                 data: numbers,
-                backgroundColor: 'rgb(66, 221, 245)',
-                borderColor: 'rgb(75, 192, 192, 0.5)'
+                backgroundColor: 'rgb(66, 221, 245, 0.3)',
+                borderColor: 'rgb(75, 192, 192, 0.3)'
             },
             {
                 label: 'Expenses',
                 data: expensesjs,
-                backgroundColor: 'rgb(245, 66, 90)',
-                borderColor: 'rgb(245, 66, 90, 0.5)'
+                backgroundColor: 'rgb(245, 66, 90, 0.3)',
+                borderColor: 'rgb(245, 66, 90, 0.3)'
             },
             {
                 label: 'Net',
