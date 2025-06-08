@@ -147,6 +147,10 @@ body {
     }
 
     .menu_container {
+        position: fixed;
+        top: 7rem;
+        height: 100vh;
+        width: 17rem;
         display: flex;
         flex-direction: column;
         transition: all 0.3s ease-in;
@@ -304,7 +308,24 @@ body {
     }
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 768px) {
+    body {
+        grid-template-areas: 
+            "navbar navbar"
+            "main main";
+    }
+
+    .main_section {
+        grid-template-columns: 100vw;
+        grid-template-rows: 18rem 18rem;
+        padding: 0;
+        gap: 1rem;
+        grid-template-areas: 
+            "month_stats"
+            "year_stats"
+            "net_graph";
+    }
+
     .month_and_year_stats_container {
         display: flex;
         left: 0rem;
@@ -317,14 +338,28 @@ body {
         /* left: 17rem; */
         position: relative;
     }
+
+    .graph_container {
+        max-width: 600px;
+    }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
     .month_and_year_stats_container {
         display: flex;
         left: 0rem;
         width: 100%; 
         transition: all 0.3s ease-in;
+    }
+
+    .graph_container {
+        max-width: 400px;
+        max-height: 300px;
+    }
+
+    .graph_container h1 {
+        color: gray;
+        font-size: 30px;
     }
 }
 
