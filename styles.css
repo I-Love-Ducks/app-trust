@@ -6,9 +6,22 @@
   font-family: 'Kumbh Sans', sans-serif;
 }
 
+body {
+    display: grid;
+    grid-template-columns: 17rem 1fr;
+    grid-template-rows: 7rem auto;
+    grid-template-areas:
+        "navbar navbar"
+        "sidebar main";
+    min-height: 100vh;
+}
 
 /* Navigation bar on top */
 .navbar {
+    grid-area: navbar;
+    position: sticky;
+    top: 0;
+    z-index: 24000;
     height: 80px;
     width: 100%;
     align-items: center;
@@ -89,15 +102,16 @@
 /* Sidebar menu */
 
 .menu_container {
-    height: 110vh;
-    width: 17rem;
-    position: fixed;
-    background-color: white;
+    grid-area: sidebar;
+    height: auto;
+    position: sticky;
+    top: 0;
     z-index: 9999;
+    background-color: white;
 }
 
 .menu {
-    margin-top: 7rem;
+    /* margin-top: 7rem; */
     width: 17rem;
     display: grid;
     position: fixed;
@@ -133,6 +147,10 @@
     }
 
     .menu_container {
+        position: fixed;
+        top: 7rem;
+        height: 100vh;
+        width: 17rem;
         display: flex;
         flex-direction: column;
         transition: all 0.3s ease-in;
@@ -172,30 +190,39 @@
 
 /* Hero section */
 
-/* Month and year section */
-
-/* Month + Year div */
-
-.month_and_year_stats_container {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center;
-    width: 1000px;
-    gap: 2rem;
-    position: absolute;
-    left: 12rem;
-    top: 9rem;
+.main_section {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 365px 365px auto;
+    grid-template-rows: 18rem 25rem auto;
+    padding: 2rem;
+    gap: 1rem;
+    grid-template-areas: 
+        "month_stats year_stats"
+        "net_graph net_graph";
 }
 
+/* Month and year section */
+
 /* Monthly expenditure box */
+
+
+#month_stats_box_container {
+    grid-area: month_stats;
+}
+
+#year_stats_box_container {
+    grid-area: year_stats;
+}
 
 .ov_box_container {
     display: flex;
     flex-direction: column;
     align-items: center; 
     justify-content: space-evenly;
+    place-self: center;
     width: 360px;
-    height: 290px;
+    height: 280px;
     border: 1px solid gray;
     border-radius: 8px;
 }
@@ -226,6 +253,7 @@
     height: 100px;
     justify-content: center;
     align-items: center;
+    place-self: center;
     display: flex;
     border: 1px solid gray;
     border-radius: 8px;
@@ -280,7 +308,24 @@
     }
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 768px) {
+    body {
+        grid-template-areas: 
+            "navbar navbar"
+            "main main";
+    }
+
+    .main_section {
+        grid-template-columns: 100vw;
+        grid-template-rows: 18rem 18rem;
+        padding: 0;
+        gap: 1rem;
+        grid-template-areas: 
+            "month_stats"
+            "year_stats"
+            "net_graph";
+    }
+
     .month_and_year_stats_container {
         display: flex;
         left: 0rem;
@@ -293,36 +338,60 @@
         /* left: 17rem; */
         position: relative;
     }
+
+    .graph_container {
+        max-width: 600px;
+    }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
     .month_and_year_stats_container {
         display: flex;
         left: 0rem;
         width: 100%; 
         transition: all 0.3s ease-in;
     }
+
+    .graph_container {
+        max-width: 400px;
+        max-height: 300px;
+    }
+
+    .graph_container h1 {
+        color: gray;
+        font-size: 30px;
+    }
 }
 
 /* Graph for income and expenses */
 
 .graph_container {
-    position: absolute;
-    width: 700px;
+    grid-area: net_graph;
+    place-self: center;
+    width: 740px;
     height: 400px;
-    z-index: 9999;
-    left: 20rem;
-    top: 28rem;
     border-radius: 6px;
     border-color: gray;
     border: 1px gray solid;
-    justify-content: center;
-    align-items: center;
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 #graph {
-    left: 17rem;
+    width: 90%;
+    max-width: 90%;
+    /* height: 400px; */
+    max-height: 320px;
+}
+
+.graph_container h1 {
+    color: gray;
+}
+
+.graph_line {
     width: 100%;
-    height: 400px;
+    height: 1px;
+    background-color: gray;
 }

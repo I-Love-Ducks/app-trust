@@ -45,13 +45,13 @@
     
     <!-- Hero section -->
     <!-- Month and year boxes -->
-    <div class="month_and_year_stats_container">
+    <div class="main_section">
         <div class="ov_box_container" id="month_stats_box_container">
             <div class="stats_container">
                 <h1 id="stats_text">Month Statistics</h1>
             </div>
             <div id="line_ov_box"></div>
-            <div class="inc_exp_box_container" id="month_inc_exp_box_container">
+            <div class="inc_exp_box_container" id="month_stats_box_container">
                 <!-- Income box -->
                 <div class="ov_box" id="month_inc_box">
                     <div class="ov_text" id="month_inc_text">
@@ -112,10 +112,12 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="graph_container">
-        <canvas id="graph"></canvas>
+        <div class="graph_container">
+            <h1>Year(to date) statistics</h1>
+            <div class="graph_line"></div>
+            <canvas id="graph"></canvas>
+        </div>
     </div>
 
     <!-- Javascript -->
